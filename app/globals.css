@@ -214,6 +214,44 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.13); padding-top: 25px; display: flex; justify-content: space-between; color: rgba(255,255,255,.42); font-size: 11px; }
 .mobile-bar { display: none; }
 
+.legal-page { background: var(--paper); }
+.legal-header { background: var(--ink); color: white; border-bottom: 1px solid rgba(255,255,255,.14); }
+.legal-header .header-inner { height: 88px; }
+.legal-back-link { min-height: 42px; padding: 0 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 10px; display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; transition: background .2s ease, border-color .2s ease; }
+.legal-back-link:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.48); }
+.legal-back-link svg { width: 17px; height: 17px; stroke-width: 1.8; }
+.legal-intro { background: var(--ink); color: white; padding: 96px 0 105px; }
+.legal-intro .eyebrow { margin-bottom: 24px; }
+.legal-intro h1 { max-width: 850px; margin-bottom: 24px; font-size: clamp(58px, 7vw, 94px); line-height: .96; letter-spacing: -.06em; font-weight: 500; }
+.legal-intro > .shell > p:last-child { max-width: 660px; margin: 0; color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.7; }
+.legal-layout { display: grid; grid-template-columns: 260px minmax(0, 760px); gap: clamp(55px, 8vw, 115px); align-items: start; padding-top: 105px; padding-bottom: 125px; }
+.legal-aside { position: sticky; top: 30px; padding: 25px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.legal-aside > span { display: block; margin-bottom: 17px; color: #71836f; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.legal-aside nav { display: flex; flex-direction: column; gap: 6px; }
+.legal-aside nav a { padding: 8px 0; color: #586c66; font-size: 15px; }
+.legal-aside nav a[aria-current="page"] { color: var(--ink); font-weight: 750; }
+.legal-aside p { margin: 25px 0 0; padding-top: 22px; border-top: 1px solid var(--line); color: #6d7e79; font-size: 12px; line-height: 1.7; }
+.legal-content { min-width: 0; }
+.legal-content > section { padding: 0 0 46px; margin: 0 0 46px; border-bottom: 1px solid var(--line); }
+.legal-content > section:last-child { margin-bottom: 0; }
+.legal-content h2 { margin: 0 0 21px; font-size: clamp(25px, 3vw, 34px); line-height: 1.16; letter-spacing: -.035em; font-weight: 600; }
+.legal-content p, .legal-content li, .legal-content address, .legal-content dd { color: #4f645e; font-size: 16px; line-height: 1.78; }
+.legal-content p { margin-bottom: 17px; }
+.legal-content p:last-child { margin-bottom: 0; }
+.legal-content address { font-style: normal; }
+.legal-content address strong, .legal-content p strong { color: var(--ink); }
+.legal-content a:not(.legal-external-link) { color: var(--ink); text-decoration: underline; text-decoration-color: #9caf94; text-underline-offset: 3px; }
+.legal-facts { margin: 26px 0 0; border-top: 1px solid var(--line); }
+.legal-facts div { display: grid; grid-template-columns: minmax(150px, .72fr) 1fr; gap: 24px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.legal-facts dt { color: #71836f; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.legal-facts dd { margin: 0; color: var(--ink); }
+.legal-content ul { margin: 20px 0 0; padding-left: 21px; }
+.legal-content li { padding-left: 5px; margin-bottom: 9px; }
+.legal-external-link { width: fit-content; display: inline-flex; align-items: center; gap: 9px; padding-bottom: 4px; border-bottom: 1px solid #91aa88; color: var(--ink); font-size: 14px; font-weight: 700; }
+.legal-external-link svg { width: 16px; height: 16px; stroke-width: 1.7; flex: 0 0 auto; }
+.legal-link-list { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-top: 24px; }
+.legal-updated { width: fit-content; margin-bottom: 46px !important; padding: 8px 12px; border-radius: 8px; background: var(--sage-light); color: var(--ink) !important; font-size: 12px !important; font-weight: 700; }
+
 @media (max-width: 900px) {
   .shell { width: min(100% - 32px, 680px); }
   .header-inner { width: calc(100% - 32px); height: 76px; }
@@ -246,6 +284,11 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .faq-section { padding: 90px 0; }
   .faq-grid { grid-template-columns: 1fr; gap: 35px; }
   .footer-main { grid-template-columns: 1fr 1fr; }
+  .legal-intro { padding: 78px 0 82px; }
+  .legal-layout { grid-template-columns: 1fr; gap: 48px; padding-top: 76px; padding-bottom: 90px; }
+  .legal-aside { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .legal-aside > span { grid-column: 1 / -1; margin-bottom: 0; }
+  .legal-aside p { margin: 0; padding: 0 0 0 20px; border-top: 0; border-left: 1px solid var(--line); }
 }
 
 @media (max-width: 560px) {
@@ -294,6 +337,19 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .closing-cta h2 { font-size: 52px; }
   .footer-main { grid-template-columns: 1fr; gap: 34px; }
   .footer-bottom { flex-direction: column; gap: 7px; }
+  .legal-header .header-inner { height: 76px; }
+  .legal-header .brand-copy small { display: none; }
+  .legal-back-link { min-height: 38px; padding-inline: 12px; font-size: 12px; }
+  .legal-intro { padding: 62px 0 68px; }
+  .legal-intro h1 { font-size: 50px; }
+  .legal-intro > .shell > p:last-child { font-size: 15px; }
+  .legal-layout { padding-top: 58px; padding-bottom: 75px; gap: 42px; }
+  .legal-aside { grid-template-columns: 1fr; }
+  .legal-aside p { padding: 20px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  .legal-content > section { padding-bottom: 36px; margin-bottom: 36px; }
+  .legal-content h2 { font-size: 25px; }
+  .legal-content p, .legal-content li, .legal-content address, .legal-content dd { font-size: 15px; line-height: 1.72; }
+  .legal-facts div { grid-template-columns: 1fr; gap: 5px; }
   .mobile-bar { position: fixed; z-index: 50; bottom: 0; inset-inline: 0; height: 64px; display: grid; grid-template-columns: 1fr 1fr; background: white; box-shadow: 0 -8px 30px rgba(18,49,41,.12); }
   .mobile-bar a { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; font-size: 14px; font-weight: 700; border-right: 1px solid var(--line); }
   .mobile-bar a svg { width: 18px; height: 18px; stroke-width: 1.8; }

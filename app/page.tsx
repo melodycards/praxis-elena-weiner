@@ -267,9 +267,9 @@ export default function Home() {
           </div>
           <div className="footer-address"><strong>Praxis</strong><span>Königswarterstraße 19<br />60316 Frankfurt am Main</span></div>
           <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">069 444242</a></div>
-          <div className="footer-links"><strong>Informationen</strong><a href="#hinweis">Datenschutz</a><a href="#hinweis">Impressum</a></div>
+          <div className="footer-links"><strong>Informationen</strong><a href="/datenschutz">Datenschutz</a><a href="/impressum">Impressum</a></div>
         </div>
-        <div className="shell footer-bottom" id="hinweis">
+        <div className="shell footer-bottom">
           <span>© 2026 Praxis Elena Weiner</span>
           <span>Allgemeinmedizin in Frankfurt am Main</span>
         </div>
