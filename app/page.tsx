@@ -272,10 +272,7 @@ export default function Home() {
           <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">069 444242</a></div>
           <div className="footer-links"><strong>Informationen</strong><a href="#hinweis">Datenschutz</a><a href="#hinweis">Impressum</a></div>
         </div>
-        <div className="shell research-note" id="hinweis">
-          <p><strong>Hinweis zum Entwurf:</strong> Diese Website wurde auf Basis öffentlich zugänglicher Arztverzeichnisse und der bereitgestellten Standortangaben erstellt. Adresse, Leistungen, Sprechzeiten, Berufsbezeichnung sowie Impressums- und Datenschutzangaben müssen vor einer offiziellen Veröffentlichung durch die Praxis geprüft und ergänzt werden.</p>
-        </div>
-        <div className="shell footer-bottom">
+        <div className="shell footer-bottom" id="hinweis">
           <span>© 2026 Praxis Elena Weiner</span>
           <span>Allgemeinmedizin in Frankfurt am Main</span>
         </div>
