@@ -269,8 +269,20 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .welcome-text-grid p { font-size: 16px; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 300px; }
-  .approach-visual { min-height: 440px; }
-  .approach-quote { width: calc(100% - 32px); }
+  .approach-visual { min-height: 440px; overflow: visible; }
+  .approach-quote {
+    width: min(320px, calc(100% - 64px));
+    left: 50%;
+    right: auto;
+    bottom: -52px;
+    transform: translateX(-50%);
+    padding: 17px 20px 18px;
+    box-shadow: 0 16px 36px rgba(23,52,45,.2);
+    z-index: 2;
+  }
+  .quote-mark { font-size: 30px; line-height: .7; }
+  .approach-quote p { font-size: 17px; line-height: 1.28; margin-top: 6px; }
+  .approach-copy { padding: 102px 32px 80px; }
   .approach-copy h2 { font-size: 44px; }
   .hours-card { padding: 26px 20px; }
   .hours-row { grid-template-columns: 1fr 1fr; }
