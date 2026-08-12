@@ -82,11 +82,13 @@ h1, h2, h3, p { margin-top: 0; }
 em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .hero h1 em { color: #dbe6d7; }
 .hero-lead { font-size: 18px; line-height: 1.6; max-width: 560px; color: rgba(255,255,255,.82); }
-.hero-actions { margin-top: 38px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.hero-actions { margin-top: 32px; display: flex; align-items: center; }
 .button { min-height: 56px; padding: 0 23px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; font-size: 14px; font-weight: 700; letter-spacing: -.005em; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
 .button svg { width: 19px; height: 19px; stroke-width: 1.8; flex: 0 0 auto; }
 .button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(9,35,29,.17); }
 .button-light { background: white; color: var(--ink); box-shadow: 0 10px 26px rgba(5,30,24,.14); }
+.button-call { min-height: 50px; padding-inline: 20px; border-radius: 11px; }
+.button-call svg { width: 18px; height: 18px; }
 .button-glass { color: white; background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.54); backdrop-filter: blur(12px); }
 .button-glass:hover { background: rgba(255,255,255,.18); }
 .button-dark { background: var(--ink); color: white; box-shadow: 0 10px 25px rgba(23,52,45,.14); }
@@ -112,7 +114,9 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .hero-location span:nth-child(2) { display: flex; flex-direction: column; }
 .hero-location small { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; opacity: .65; margin-bottom: 4px; }
 .hero-location strong { font-size: 15px; }
-.location-action { margin-left: auto; width: 19px; height: 19px; stroke-width: 1.8; }
+.location-route { margin-left: auto; min-height: 38px; padding: 0 14px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--ink); color: white; font-size: 12px; font-weight: 700; box-shadow: 0 8px 18px rgba(23,52,45,.14); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.location-route svg { width: 15px; height: 15px; stroke-width: 1.8; }
+.location-route:hover { transform: translateY(-1px); background: var(--ink-2); box-shadow: 0 10px 22px rgba(23,52,45,.18); }
 
 .welcome { padding: 150px 0 140px; display: grid; grid-template-columns: 30% 1fr; gap: 60px; }
 .welcome-kicker { display: flex; flex-direction: column; justify-content: space-between; }
@@ -221,8 +225,7 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .hero-content { padding-top: 130px; }
   .hero h1 { font-size: clamp(48px, 13vw, 68px); }
   .hero-lead { font-size: 16px; }
-  .hero-actions { align-items: stretch; display: grid; grid-template-columns: 1fr 1fr; max-width: 510px; gap: 10px; }
-  .hero-actions .text-link { grid-column: 1 / -1; }
+  .hero-actions { display: flex; align-items: center; }
   .hero-location { width: 100%; min-height: 92px; padding: 18px 22px; }
   .welcome { padding: 95px 0; grid-template-columns: 1fr; gap: 20px; }
   .welcome-kicker { flex-direction: row; align-items: flex-start; }
@@ -255,10 +258,13 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .hero h1 br { display: none; }
   .hero-lead { max-width: 92%; }
   .button { width: 100%; }
+  .hero-actions .button-call { width: auto; min-height: 48px; padding-inline: 18px; }
   .text-link { width: fit-content; }
-  .hero-location { font-size: 13px; }
+  .hero-location { font-size: 13px; gap: 12px; padding: 16px; }
+  .hero-location span:nth-child(2) { flex: 1; min-width: 0; }
   .hero-location small { font-size: 9px; }
   .hero-location strong { font-size: 13px; }
+  .location-route { min-height: 36px; padding-inline: 12px; flex: 0 0 auto; }
   .welcome-copy h2, .section-head h2, .visit-head h2, .faq-grid h2 { font-size: 42px; }
   .welcome-text-grid p { font-size: 16px; }
   .services-grid { grid-template-columns: 1fr; }
@@ -283,9 +289,7 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 }
 
 @media (max-width: 430px) {
-  .hero-actions { grid-template-columns: 1fr; }
-  .hero-actions .text-link { grid-column: auto; }
-  .hero-actions .button { width: 100%; }
+  .hero-actions .button-call { width: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

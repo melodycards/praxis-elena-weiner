@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   Activity,
-  ArrowDown,
   CalendarClock,
   ClipboardCheck,
   HeartHandshake,
@@ -90,21 +89,19 @@ export default function Home() {
         <div className="hero-shade" />
         <div className="hero-content shell">
           <p className="eyebrow light"><span /> Hausarztpraxis in Frankfurt am Main</p>
-          <h1>Medizin, die den<br />Menschen <em>versteht.</em></h1>
+          <h1>Medizin, die den<br />{" "}Menschen <em>versteht.</em></h1>
           <p className="hero-lead">
             Persönliche hausärztliche Versorgung mit Zeit zum Zuhören, einer klaren Einordnung und einem Blick auf das Ganze.
           </p>
           <div className="hero-actions">
             <a className="button button-light button-call" href="tel:+4969444242"><Phone aria-hidden="true" /> Jetzt anrufen</a>
-            <a className="button button-glass button-route" href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><Navigation aria-hidden="true" /> Route starten</a>
-            <a className="text-link light-link" href="#leistungen">Leistungen ansehen <ArrowDown aria-hidden="true" /></a>
           </div>
         </div>
-        <a className="hero-location" href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer">
+        <div className="hero-location">
           <span className="location-icon" aria-hidden="true"><MapPin /></span>
           <span><small>Praxis im Ostend</small><strong>Königswarterstraße 19</strong></span>
-          <Navigation className="location-action" aria-hidden="true" />
-        </a>
+          <a className="location-route" href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer" aria-label="Route zur Praxis starten"><Navigation aria-hidden="true" /> Route</a>
+        </div>
       </section>
 
       <section className="welcome shell" id="praxis">
