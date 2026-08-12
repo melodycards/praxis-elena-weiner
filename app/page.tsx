@@ -1,4 +1,20 @@
 import type { Metadata } from "next";
+import {
+  Activity,
+  ArrowDown,
+  CalendarClock,
+  ClipboardCheck,
+  HeartHandshake,
+  HeartPulse,
+  ListChecks,
+  MapPin,
+  MessagesSquare,
+  Navigation,
+  Phone,
+  ShieldCheck,
+  Stethoscope,
+  Syringe,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Praxis Elena Weiner | Hausärztliche Versorgung in Frankfurt",
@@ -8,32 +24,32 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    number: "01",
+    icon: Stethoscope,
     title: "Hausärztliche Versorgung",
     text: "Ihre erste Anlaufstelle bei akuten Beschwerden, gesundheitlichen Fragen und für die langfristige Begleitung.",
   },
   {
-    number: "02",
+    icon: ShieldCheck,
     title: "Vorsorge & Prävention",
     text: "Gesundheit im Blick behalten: persönliche Beratung zu Vorsorge, Lebensstil und individuellen Risikofaktoren.",
   },
   {
-    number: "03",
+    icon: Syringe,
     title: "Impfberatung",
     text: "Einordnung des persönlichen Impfschutzes und Beratung zu empfohlenen Auffrischungen und saisonalen Impfungen.",
   },
   {
-    number: "04",
+    icon: HeartPulse,
     title: "Psychosomatische Grundversorgung",
     text: "Körperliche und seelische Beschwerden gemeinsam betrachten – aufmerksam, vertraulich und ohne vorschnelle Urteile.",
   },
   {
-    number: "05",
+    icon: Activity,
     title: "Akute Beschwerden",
     text: "Medizinische Einschätzung bei plötzlich auftretenden Beschwerden und Orientierung für die nächsten Schritte.",
   },
   {
-    number: "06",
+    icon: ClipboardCheck,
     title: "Kontinuierliche Begleitung",
     text: "Koordination von Befunden, Medikamenten und fachärztlicher Mitbehandlung mit einem verlässlichen Überblick.",
   },
@@ -64,7 +80,7 @@ export default function Home() {
             <a href="#leistungen">Leistungen</a>
             <a href="#praxis">Praxis</a>
             <a href="#sprechzeiten">Sprechzeiten</a>
-            <a className="nav-cta" href="tel:+4969444242">Termin anfragen <span>↗</span></a>
+            <a className="nav-cta" href="tel:+4969444242"><Phone aria-hidden="true" /> Termin anfragen</a>
           </nav>
         </div>
       </header>
@@ -79,14 +95,15 @@ export default function Home() {
             Persönliche hausärztliche Versorgung mit Zeit zum Zuhören, einer klaren Einordnung und einem Blick auf das Ganze.
           </p>
           <div className="hero-actions">
-            <a className="button button-light" href="tel:+4969444242">Termin telefonisch anfragen <span>↗</span></a>
-            <a className="text-link light-link" href="#leistungen">Leistungen ansehen <span>↓</span></a>
+            <a className="button button-light button-call" href="tel:+4969444242"><Phone aria-hidden="true" /> Jetzt anrufen</a>
+            <a className="button button-glass button-route" href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><Navigation aria-hidden="true" /> Route starten</a>
+            <a className="text-link light-link" href="#leistungen">Leistungen ansehen <ArrowDown aria-hidden="true" /></a>
           </div>
         </div>
         <a className="hero-location" href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer">
-          <span className="location-dot" aria-hidden="true" />
+          <span className="location-icon" aria-hidden="true"><MapPin /></span>
           <span><small>Praxis im Ostend</small><strong>Königswarterstraße 19</strong></span>
-          <b>↗</b>
+          <Navigation className="location-action" aria-hidden="true" />
         </a>
       </section>
 
@@ -121,15 +138,16 @@ export default function Home() {
           </div>
 
           <div className="services-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.number}>
-                <span className="service-number">{service.number}</span>
-                <div className="service-symbol" aria-hidden="true">+</div>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <span className="service-line" />
-              </article>
-            ))}
+            {services.map((service) => {
+              const ServiceIcon = service.icon;
+              return (
+                <article className="service-card" key={service.title}>
+                  <div className="service-icon" aria-hidden="true"><ServiceIcon /></div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                </article>
+              );
+            })}
           </div>
           <p className="service-note">Das konkrete Leistungsangebot und die Verfügbarkeit einzelner Untersuchungen bitte vorab telefonisch erfragen.</p>
         </div>
@@ -159,9 +177,9 @@ export default function Home() {
             Beschwerden haben selten nur eine Seite. Deshalb werden körperliche Befunde, persönliche Lebenssituation und seelisches Wohlbefinden gemeinsam betrachtet.
           </p>
           <ul>
-            <li><span>01</span> Raum für Ihre Fragen</li>
-            <li><span>02</span> Verständliche nächste Schritte</li>
-            <li><span>03</span> Kontinuierliche Begleitung</li>
+            <li><span className="approach-icon" aria-hidden="true"><MessagesSquare /></span> Raum für Ihre Fragen</li>
+            <li><span className="approach-icon" aria-hidden="true"><ListChecks /></span> Verständliche nächste Schritte</li>
+            <li><span className="approach-icon" aria-hidden="true"><HeartHandshake /></span> Kontinuierliche Begleitung</li>
           </ul>
         </div>
       </section>
@@ -172,13 +190,13 @@ export default function Home() {
             <p className="eyebrow"><span /> Ihr Besuch</p>
             <h2>Alle wichtigen Infos<br /><em>auf einen Blick.</em></h2>
           </div>
-          <a className="button button-dark" href="tel:+4969444242">Jetzt anrufen <span>↗</span></a>
+          <a className="button button-dark" href="tel:+4969444242"><Phone aria-hidden="true" /> Jetzt anrufen</a>
         </div>
 
         <div className="visit-grid">
           <article className="hours-card">
             <div className="card-title-row">
-              <span className="card-icon" aria-hidden="true">◷</span>
+              <span className="card-icon" aria-hidden="true"><CalendarClock /></span>
               <div><small>Sprechzeiten</small><h3>Wann wir für Sie da sind</h3></div>
             </div>
             <div className="hours-list">
@@ -195,14 +213,14 @@ export default function Home() {
 
           <article className="contact-card">
             <div className="contact-top">
-              <span className="card-icon inverted" aria-hidden="true">⌖</span>
+              <span className="card-icon inverted" aria-hidden="true"><MapPin /></span>
               <small>Adresse & Kontakt</small>
               <h3>Mitten im Frankfurter Ostend</h3>
               <p>Königswarterstraße 19<br />60316 Frankfurt am Main</p>
             </div>
             <div className="contact-links">
-              <a href="tel:+4969444242"><span><small>Telefon</small><strong>069 444242</strong></span><b>↗</b></a>
-              <a href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><span><small>Anfahrt</small><strong>Route in Google Maps</strong></span><b>↗</b></a>
+              <a href="tel:+4969444242"><span><small>Telefon</small><strong>069 444242</strong></span><span className="contact-link-icon" aria-hidden="true"><Phone /></span></a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><span><small>Anfahrt</small><strong>Route in Google Maps</strong></span><span className="contact-link-icon" aria-hidden="true"><Navigation /></span></a>
             </div>
           </article>
         </div>
@@ -240,7 +258,7 @@ export default function Home() {
           <p className="eyebrow light"><span /> Kontakt</p>
           <h2>Wir sind für Sie da.</h2>
           <p>Rufen Sie uns an und vereinbaren Sie Ihren Termin persönlich.</p>
-          <a href="tel:+4969444242">069 444242 <span>↗</span></a>
+          <a href="tel:+4969444242"><Phone aria-hidden="true" /> 069 444242</a>
         </div>
       </section>
 
@@ -264,8 +282,8 @@ export default function Home() {
       </footer>
 
       <nav className="mobile-bar" aria-label="Schnellkontakt">
-        <a href="tel:+4969444242">Anrufen <span>↗</span></a>
-        <a href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer">Route <span>↗</span></a>
+        <a href="tel:+4969444242"><Phone aria-hidden="true" /> Anrufen</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><Navigation aria-hidden="true" /> Route</a>
       </nav>
     </main>
   );
