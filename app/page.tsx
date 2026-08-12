@@ -70,7 +70,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="start">
-        <div className="hero-image" role="img" aria-label="Ruhiges ärztliches Beratungsgespräch in einer modernen Praxis" />
+        <div className="hero-image" role="img" aria-label="Eingang des Praxisgebäudes in der Königswarterstraße in Frankfurt" />
         <div className="hero-shade" />
         <div className="hero-content shell">
           <p className="eyebrow light"><span /> Hausarztpraxis in Frankfurt am Main</p>
@@ -137,6 +137,16 @@ export default function Home() {
 
       <section className="approach-section">
         <div className="approach-visual">
+          <div
+            className="equipment-photo equipment-pressure"
+            role="img"
+            aria-label="Nahaufnahme eines Blutdruckmessgeräts und Stethoskops"
+          />
+          <div
+            className="equipment-photo equipment-ecg"
+            role="img"
+            aria-label="Nahaufnahme eines EKG-Geräts"
+          />
           <div className="approach-quote">
             <span className="quote-mark">“</span>
             <p>Gute Medizin beginnt mit aufmerksamem Zuhören.</p>

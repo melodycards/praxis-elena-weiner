@@ -71,7 +71,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav-cta span, .button span { font-size: 18px; }
 
 .hero { min-height: 850px; position: relative; color: white; display: flex; align-items: center; overflow: hidden; }
-.hero-image { position: absolute; inset: 0; background: url('/praxis-hero.png') center 45% / cover no-repeat; transform: scale(1.01); }
+.hero-image { position: absolute; inset: 0; background: url('/praxis-eingang.jpg') center 68% / cover no-repeat; transform: scale(1.01); }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,45,38,.94) 0%, rgba(15,45,38,.72) 38%, rgba(15,45,38,.12) 70%, rgba(15,45,38,.16) 100%); }
 .hero-content { z-index: 2; padding-top: 92px; }
 .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 10px; margin: 0 0 30px; }
@@ -135,8 +135,11 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .service-note { color: #6b7c77; font-size: 12px; margin: 20px 0 0; }
 
 .approach-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 730px; }
-.approach-visual { background: linear-gradient(rgba(28,56,49,.18), rgba(28,56,49,.18)), url('/praxis-hero.png') 72% center / cover no-repeat; position: relative; }
-.approach-quote { position: absolute; bottom: 0; right: 0; width: min(390px, 72%); background: var(--sage-light); padding: 34px 38px 38px; }
+.approach-visual { position: relative; display: grid; grid-template-rows: 1fr 1fr; gap: 2px; background: var(--ink); overflow: hidden; }
+.equipment-photo { min-height: 0; background-size: cover; background-repeat: no-repeat; }
+.equipment-pressure { background-image: linear-gradient(rgba(28,56,49,.06), rgba(28,56,49,.06)), url('/blutdruck-nahaufnahme.jpg'); background-position: center 60%; }
+.equipment-ecg { background-image: linear-gradient(rgba(28,56,49,.06), rgba(28,56,49,.06)), url('/ekg-nahaufnahme.jpg'); background-position: center 55%; }
+.approach-quote { position: absolute; bottom: 0; right: 0; width: min(390px, 72%); background: var(--sage-light); padding: 34px 38px 38px; box-shadow: -18px -18px 50px rgba(23,52,45,.12); }
 .quote-mark { font-family: Georgia, serif; font-size: 56px; line-height: .8; color: #6e8b66; }
 .approach-quote p { font-family: var(--font-serif); font-size: 23px; line-height: 1.35; font-style: italic; margin: 12px 0 0; }
 .approach-copy { background: var(--ink); color: white; padding: 110px clamp(48px, 7vw, 110px); }
@@ -209,7 +212,7 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .desktop-nav { display: none; }
   .brand-copy strong { font-size: 15px; }
   .hero { min-height: 780px; align-items: flex-end; padding-bottom: 128px; }
-  .hero-image { background-position: 62% center; }
+  .hero-image { background-position: 46% 68%; }
   .hero-shade { background: linear-gradient(90deg, rgba(15,45,38,.91), rgba(15,45,38,.45)), linear-gradient(0deg, rgba(15,45,38,.65), transparent 55%); }
   .hero-content { padding-top: 130px; }
   .hero h1 { font-size: clamp(48px, 13vw, 68px); }
