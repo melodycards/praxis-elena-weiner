@@ -271,18 +271,18 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .service-card { min-height: 300px; }
   .approach-visual { min-height: 440px; overflow: visible; }
   .approach-quote {
-    width: min(320px, calc(100% - 64px));
+    width: min(280px, calc(100% - 80px));
     left: 50%;
     right: auto;
-    bottom: -52px;
+    bottom: -40px;
     transform: translateX(-50%);
-    padding: 17px 20px 18px;
-    box-shadow: 0 16px 36px rgba(23,52,45,.2);
+    padding: 10px 14px 12px;
+    box-shadow: 0 14px 30px rgba(23,52,45,.18);
     z-index: 2;
   }
-  .quote-mark { font-size: 30px; line-height: .7; }
-  .approach-quote p { font-size: 17px; line-height: 1.28; margin-top: 6px; }
-  .approach-copy { padding: 102px 32px 80px; }
+  .quote-mark { font-size: 24px; line-height: .65; }
+  .approach-quote p { font-size: 16px; line-height: 1.25; margin-top: 2px; }
+  .approach-copy { padding: 86px 32px 80px; }
   .approach-copy h2 { font-size: 44px; }
   .hours-card { padding: 26px 20px; }
   .hours-row { grid-template-columns: 1fr 1fr; }
