@@ -79,7 +79,6 @@ export default function Home() {
             <a href="#leistungen">Leistungen</a>
             <a href="#praxis">Praxis</a>
             <a href="#sprechzeiten">Sprechzeiten</a>
-            <a className="nav-cta" href="tel:+4969444242"><Phone aria-hidden="true" /> Termin anfragen</a>
           </nav>
         </div>
       </header>

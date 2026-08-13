@@ -13,7 +13,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 body {
   margin: 0;
   background: var(--paper);
@@ -28,11 +28,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
-  z-index: 20;
+  z-index: 50;
   color: white;
+  background: rgba(23,52,45,.94);
   border-bottom: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 8px 24px rgba(9,35,29,.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 .header-inner {
   width: min(1320px, calc(100% - 48px));
@@ -65,10 +69,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-copy strong { font-size: 17px; letter-spacing: .02em; }
 .brand-copy small { font-size: 11px; margin-top: 5px; opacity: .78; }
 .desktop-nav { display: flex; align-items: center; gap: 34px; font-size: 14px; font-weight: 600; }
-.desktop-nav > a:not(.nav-cta) { border-bottom: 1px solid transparent; padding: 8px 0; }
-.desktop-nav > a:not(.nav-cta):hover { border-color: white; }
-.nav-cta { background: white; color: var(--ink); padding: 14px 19px; border-radius: 10px; display: inline-flex; gap: 10px; align-items: center; box-shadow: 0 10px 24px rgba(6,30,24,.12); }
-.nav-cta svg { width: 17px; height: 17px; stroke-width: 1.8; }
+.desktop-nav > a { border-bottom: 1px solid transparent; padding: 8px 0; }
+.desktop-nav > a:hover { border-color: white; }
 
 .hero { min-height: 850px; position: relative; color: white; display: flex; align-items: center; overflow: hidden; }
 .hero-image { position: absolute; inset: 0; background: url('/praxis-eingang.jpg') center 68% / cover no-repeat; transform: scale(1.01); }
@@ -251,6 +253,7 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 .legal-updated { width: fit-content; margin-bottom: 46px !important; padding: 8px 12px; border-radius: 8px; background: var(--sage-light); color: var(--ink) !important; font-size: 12px !important; font-weight: 700; }
 
 @media (max-width: 900px) {
+  html { scroll-padding-top: 76px; }
   .shell { width: min(100% - 32px, 680px); }
   .header-inner { width: calc(100% - 32px); height: 76px; }
   .desktop-nav { display: none; }
@@ -290,14 +293,6 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 }
 
 @media (max-width: 560px) {
-  html { scroll-padding-top: 76px; }
-  .site-header {
-    position: fixed;
-    inset: 0 0 auto;
-    z-index: 50;
-    background: var(--ink);
-    box-shadow: 0 8px 24px rgba(9,35,29,.14);
-  }
   .site-header .brand-mark { width: 36px; height: 36px; }
   .site-header .brand-mark::before { left: 16px; top: 9px; }
   .site-header .brand-mark::after { left: 9px; top: 16px; }
