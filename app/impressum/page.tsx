@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import LegalPageShell, { ExternalLegalLink } from "../components/LegalPageShell";
 
 export const metadata: Metadata = {
-  title: "Impressum | Praxis Dr. med. Elena Weiner",
-  description: "Impressum der Praxis Dr. med. Elena Weiner in Frankfurt am Main.",
+  title: "Impressum | Praxis Elena Weiner",
+  description: "Impressum der Praxis Elena Weiner in Frankfurt am Main.",
 };
 
 export default function ImpressumPage() {
@@ -17,8 +17,8 @@ export default function ImpressumPage() {
       <section>
         <h2>Angaben zur Praxis</h2>
         <address>
-          <strong>Praxis Dr. med. Elena Weiner</strong><br />
-          Dr. med. Elena Weiner<br />
+          <strong>Praxis Elena Weiner</strong><br />
+          Elena Weiner<br />
           Fachärztin für Allgemeinmedizin<br />
           Königswarterstraße 19<br />
           60316 Frankfurt am Main<br />
@@ -35,9 +35,8 @@ export default function ImpressumPage() {
         <dl className="legal-facts">
           <div><dt>Berufsbezeichnung</dt><dd>Ärztin</dd></div>
           <div><dt>Facharztbezeichnung</dt><dd>Fachärztin für Allgemeinmedizin</dd></div>
-          <div><dt>Akademischer Titel</dt><dd>Dr. med.</dd></div>
         </dl>
-        {/* TODO(impressum): Staat der Verleihung der Berufs- und Facharztbezeichnung von Dr. med. Elena Weiner bestätigen und ergänzen. */}
+        {/* TODO(impressum): Staat der Verleihung der Berufs- und Facharztbezeichnung von Elena Weiner bestätigen und ergänzen. */}
         {/* TODO(legal-review): Prüfen, ob Angaben zur Berufshaftpflichtversicherung nach der konkreten Praxiskonstellation bereitzustellen sind; keine Versicherungsdaten ohne Bestätigung eintragen. */}
       </section>
 

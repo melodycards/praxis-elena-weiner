@@ -32,11 +32,13 @@ export default function LegalPageShell({
   intro,
   title,
 }: LegalPageShellProps) {
+  const practiceLabel = activePage === "impressum" ? "Praxis Elena Weiner" : "Praxis Dr. med. Elena Weiner";
+
   return (
     <main className="legal-page">
       <header className="legal-header">
         <div className="header-inner">
-          <Link className="brand" href="/" aria-label="Praxis Dr. med. Elena Weiner – Startseite">
+          <Link className="brand" href="/" aria-label={`${practiceLabel} – Startseite`}>
             <span className="brand-mark" aria-hidden="true"><i /></span>
             <span className="brand-copy">
               <strong>Elena Weiner</strong>
@@ -65,7 +67,7 @@ export default function LegalPageShell({
             <Link href="/impressum" aria-current={activePage === "impressum" ? "page" : undefined}>Impressum</Link>
             <Link href="/datenschutz" aria-current={activePage === "datenschutz" ? "page" : undefined}>Datenschutz</Link>
           </nav>
-          <p>Praxis Dr. med. Elena Weiner<br />Königswarterstraße 19<br />60316 Frankfurt am Main</p>
+          <p>{practiceLabel}<br />Königswarterstraße 19<br />60316 Frankfurt am Main</p>
         </aside>
         <article className="legal-content">{children}</article>
       </div>
