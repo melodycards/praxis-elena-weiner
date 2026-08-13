@@ -79,6 +79,7 @@ export default function Home() {
             <a href="#leistungen">Leistungen</a>
             <a href="#praxis">Praxis</a>
             <a href="#sprechzeiten">Sprechzeiten</a>
+            <a href="#kontakt">Kontakt</a>
           </nav>
         </div>
       </header>
@@ -249,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="closing-cta">
+      <section className="closing-cta" id="kontakt">
         <div className="shell closing-inner">
           <p className="eyebrow light"><span /> Kontakt</p>
           <h2>Wir sind für Sie da.</h2>
