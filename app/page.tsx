@@ -275,10 +275,6 @@ export default function Home() {
         </div>
       </footer>
 
-      <nav className="mobile-bar" aria-label="Schnellkontakt">
-        <a href="tel:+4969444242"><Phone aria-hidden="true" /> Anrufen</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><Navigation aria-hidden="true" /> Route</a>
-      </nav>
     </main>
   );
 }

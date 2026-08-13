@@ -212,8 +212,6 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 .footer-address > strong, .footer-contact > strong, .footer-links > strong { text-transform: uppercase; letter-spacing: .13em; font-size: 9px; color: #adc0a8; margin-bottom: 8px; }
 .footer-address span, .footer-contact a, .footer-links a { color: rgba(255,255,255,.67); line-height: 1.7; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.13); padding-top: 25px; display: flex; justify-content: space-between; color: rgba(255,255,255,.42); font-size: 11px; }
-.mobile-bar { display: none; }
-
 .legal-page { background: var(--paper); }
 .legal-header { background: var(--ink); color: white; border-bottom: 1px solid rgba(255,255,255,.14); }
 .legal-header .header-inner { height: 88px; }
@@ -292,7 +290,14 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 }
 
 @media (max-width: 560px) {
-  body { padding-bottom: 64px; }
+  html { scroll-padding-top: 76px; }
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    background: var(--ink);
+    box-shadow: 0 8px 24px rgba(9,35,29,.14);
+  }
   .site-header .brand-mark { width: 36px; height: 36px; }
   .site-header .brand-mark::before { left: 16px; top: 9px; }
   .site-header .brand-mark::after { left: 9px; top: 16px; }
@@ -350,10 +355,6 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
   .legal-content h2 { font-size: 25px; }
   .legal-content p, .legal-content li, .legal-content address, .legal-content dd { font-size: 15px; line-height: 1.72; }
   .legal-facts div { grid-template-columns: 1fr; gap: 5px; }
-  .mobile-bar { position: fixed; z-index: 50; bottom: 0; inset-inline: 0; height: 64px; display: grid; grid-template-columns: 1fr 1fr; background: white; box-shadow: 0 -8px 30px rgba(18,49,41,.12); }
-  .mobile-bar a { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; font-size: 14px; font-weight: 700; border-right: 1px solid var(--line); }
-  .mobile-bar a svg { width: 18px; height: 18px; stroke-width: 1.8; }
-  .mobile-bar a:first-child { background: var(--ink); color: white; }
 }
 
 @media (max-width: 430px) {
