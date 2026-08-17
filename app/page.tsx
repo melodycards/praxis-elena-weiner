@@ -6,10 +6,12 @@ import {
   HeartHandshake,
   HeartPulse,
   ListChecks,
+  Mail,
   MapPin,
   MessagesSquare,
   Navigation,
   Phone,
+  Printer,
   ShieldCheck,
   Stethoscope,
   Syringe,
@@ -99,8 +101,8 @@ export default function Home() {
         </div>
         <div className="hero-location">
           <span className="location-icon" aria-hidden="true"><MapPin /></span>
-          <span><small>Praxis im Ostend</small><strong>Königswarterstraße 19</strong></span>
-          <a className="location-route" href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer" aria-label="Route zur Praxis starten"><Navigation aria-hidden="true" /> Route</a>
+          <span><small>Praxis im Ostend</small><strong>Königswarterstraße 16</strong></span>
+          <a className="location-route" href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+16%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer" aria-label="Route zur Praxis starten"><Navigation aria-hidden="true" /> Route</a>
         </div>
       </section>
 
@@ -213,11 +215,13 @@ export default function Home() {
               <span className="card-icon inverted" aria-hidden="true"><MapPin /></span>
               <small>Adresse & Kontakt</small>
               <h3>Mitten im Frankfurter Ostend</h3>
-              <p>Königswarterstraße 19<br />60316 Frankfurt am Main</p>
+              <p>Königswarterstraße 16<br />60316 Frankfurt am Main</p>
             </div>
             <div className="contact-links">
               <a href="tel:+4969444242"><span><small>Telefon</small><strong>069 444242</strong></span><span className="contact-link-icon" aria-hidden="true"><Phone /></span></a>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+19%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><span><small>Anfahrt</small><strong>Route in Google Maps</strong></span><span className="contact-link-icon" aria-hidden="true"><Navigation /></span></a>
+              <a href="fax:+496990434196"><span><small>Fax</small><strong>069/90434196</strong></span><span className="contact-link-icon" aria-hidden="true"><Printer /></span></a>
+              <a href="mailto:fax.praxis.weiner@t-online.de"><span><small>E-Mail</small><strong>fax.praxis.weiner@t-online.de</strong></span><span className="contact-link-icon" aria-hidden="true"><Mail /></span></a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=K%C3%B6nigswarterstra%C3%9Fe+16%2C+60316+Frankfurt+am+Main" target="_blank" rel="noreferrer"><span><small>Anfahrt</small><strong>Route in Google Maps</strong></span><span className="contact-link-icon" aria-hidden="true"><Navigation /></span></a>
             </div>
           </article>
         </div>
@@ -265,8 +269,8 @@ export default function Home() {
             <span className="brand-mark" aria-hidden="true"><i /></span>
             <span className="brand-copy"><strong>Elena Weiner</strong><small>Fachärztin für Allgemeinmedizin</small></span>
           </div>
-          <div className="footer-address"><strong>Praxis</strong><span>Königswarterstraße 19<br />60316 Frankfurt am Main</span></div>
-          <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">069 444242</a></div>
+          <div className="footer-address"><strong>Praxis</strong><span>Königswarterstraße 16<br />60316 Frankfurt am Main</span></div>
+          <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">Telefon: 069 444242</a><a href="fax:+496990434196">Fax: 069/90434196</a><a href="mailto:fax.praxis.weiner@t-online.de">fax.praxis.weiner@t-online.de</a></div>
           <div className="footer-links"><strong>Informationen</strong><a href="/datenschutz">Datenschutz</a><a href="/impressum">Impressum</a></div>
         </div>
         <div className="shell footer-bottom">

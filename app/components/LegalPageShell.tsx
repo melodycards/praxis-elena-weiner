@@ -67,7 +67,7 @@ export default function LegalPageShell({
             <Link href="/impressum" aria-current={activePage === "impressum" ? "page" : undefined}>Impressum</Link>
             <Link href="/datenschutz" aria-current={activePage === "datenschutz" ? "page" : undefined}>Datenschutz</Link>
           </nav>
-          <p>{practiceLabel}<br />Königswarterstraße 19<br />60316 Frankfurt am Main</p>
+          <p>{practiceLabel}<br />Königswarterstraße 16<br />60316 Frankfurt am Main</p>
         </aside>
         <article className="legal-content">{children}</article>
       </div>
@@ -78,8 +78,8 @@ export default function LegalPageShell({
             <span className="brand-mark" aria-hidden="true"><i /></span>
             <span className="brand-copy"><strong>Elena Weiner</strong><small>Fachärztin für Allgemeinmedizin</small></span>
           </Link>
-          <div className="footer-address"><strong>Praxis</strong><span>Königswarterstraße 19<br />60316 Frankfurt am Main</span></div>
-          <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">069 444242</a></div>
+          <div className="footer-address"><strong>Praxis</strong><span>Königswarterstraße 16<br />60316 Frankfurt am Main</span></div>
+          <div className="footer-contact"><strong>Kontakt</strong><a href="tel:+4969444242">Telefon: 069 444242</a><a href="fax:+496990434196">Fax: 069/90434196</a><a href="mailto:fax.praxis.weiner@t-online.de">fax.praxis.weiner@t-online.de</a></div>
           <div className="footer-links"><strong>Informationen</strong><Link href="/datenschutz">Datenschutz</Link><Link href="/impressum">Impressum</Link></div>
         </div>
         <div className="shell footer-bottom">

@@ -20,14 +20,15 @@ export default function ImpressumPage() {
           <strong>Praxis Elena Weiner</strong><br />
           Elena Weiner<br />
           Fachärztin für Allgemeinmedizin<br />
-          Königswarterstraße 19<br />
+          Königswarterstraße 16<br />
           60316 Frankfurt am Main<br />
           Deutschland
         </address>
         <dl className="legal-facts">
           <div><dt>Telefon</dt><dd><a href="tel:+4969444242">069 444242</a></dd></div>
+          <div><dt>Fax</dt><dd><a href="fax:+496990434196">069/90434196</a></dd></div>
+          <div><dt>E-Mail</dt><dd><a href="mailto:fax.praxis.weiner@t-online.de">fax.praxis.weiner@t-online.de</a></dd></div>
         </dl>
-        {/* TODO(impressum): Vor offizieller Nutzung eine erreichbare Praxis-E-Mail-Adresse als Pflichtangabe ergänzen. Keine Adresse erfinden. */}
       </section>
 
       <section>

@@ -213,6 +213,7 @@ footer { background: var(--ink); color: white; padding: 75px 0 30px; }
 .footer-address, .footer-contact, .footer-links { display: flex; flex-direction: column; gap: 7px; font-size: 13px; }
 .footer-address > strong, .footer-contact > strong, .footer-links > strong { text-transform: uppercase; letter-spacing: .13em; font-size: 9px; color: #adc0a8; margin-bottom: 8px; }
 .footer-address span, .footer-contact a, .footer-links a { color: rgba(255,255,255,.67); line-height: 1.7; }
+.footer-contact a { overflow-wrap: anywhere; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.13); padding-top: 25px; display: flex; justify-content: space-between; color: rgba(255,255,255,.42); font-size: 11px; }
 .legal-page { background: var(--paper); }
 .legal-header { background: var(--ink); color: white; border-bottom: 1px solid rgba(255,255,255,.14); }

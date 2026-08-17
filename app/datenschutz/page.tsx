@@ -21,11 +21,12 @@ export default function DatenschutzPage() {
         <address>
           <strong>Dr. med. Elena Weiner</strong><br />
           Praxis für Allgemeinmedizin<br />
-          Königswarterstraße 19<br />
+          Königswarterstraße 16<br />
           60316 Frankfurt am Main<br />
-          Telefon: <a href="tel:+4969444242">069 444242</a>
+          Telefon: <a href="tel:+4969444242">069 444242</a><br />
+          Fax: <a href="fax:+496990434196">069/90434196</a><br />
+          E-Mail: <a href="mailto:fax.praxis.weiner@t-online.de">fax.praxis.weiner@t-online.de</a>
         </address>
-        {/* TODO(datenschutz): Vor offizieller Nutzung eine erreichbare E-Mail-Adresse der Verantwortlichen ergänzen. Keine Adresse erfinden. */}
       </section>
 
       <section>
@@ -66,7 +67,8 @@ export default function DatenschutzPage() {
 
       <section>
         <h2>7. Kontaktaufnahme</h2>
-        <p>Die Website bietet ausschließlich eine telefonische Kontaktmöglichkeit. Es gibt kein Kontakt- oder Terminformular und keine Online-Terminbuchung. Bei einem Anruf gelten zusätzlich die Datenverarbeitungsvorgänge des jeweiligen Telekommunikationsanbieters und der Praxisorganisation.</p>
+        <p>Die Website bietet Kontaktmöglichkeiten per Telefon, Fax und E-Mail. Die E-Mail-Adresse ist als normaler Mail-Link eingebunden; beim bloßen Aufruf der Website werden dadurch keine Daten an den E-Mail-Anbieter übertragen. Erst wenn Sie selbst eine Nachricht versenden, werden die von Ihnen übermittelten Angaben zur Bearbeitung Ihres Anliegens verarbeitet. Je nach Anliegen erfolgt dies auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO im berechtigten Interesse an einer sachgerechten Kommunikation.</p>
+        <p>Es gibt kein Kontakt- oder Terminformular und keine Online-Terminbuchung. Bei Telefonaten, Faxen und E-Mails können zusätzlich die jeweiligen Telekommunikations- und E-Mail-Anbieter beteiligt sein.</p>
       </section>
 
       <section>
